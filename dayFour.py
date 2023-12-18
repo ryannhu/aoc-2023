@@ -207,7 +207,6 @@ for line in input:
     hand = set()
     seen = 0
     word = line.split(" ")
-    print(word)
     for i in range(2, len(word)):
         if word[i] == "":
             continue
@@ -218,8 +217,6 @@ for line in input:
             winning.add(word[i])
         else:
             hand.add(word[i])
-    print(winning.intersection(hand))
-    # print(winning.union(hand))
     j = len(winning.intersection(hand))
     if j:
         j = 2 ** (j -1 )
@@ -234,7 +231,6 @@ for cur, line in enumerate(input):
     hand = set()
     seen = 0
     word = line.split(" ")
-    print(word)
     for i in range(2, len(word)):
         if word[i] == "":
             continue
@@ -245,7 +241,6 @@ for cur, line in enumerate(input):
             winning.add(word[i])
         else:
             hand.add(word[i])
-    print(winning.intersection(hand))
     # print(winning.union(hand))
     j = len(winning.intersection(hand))
     for i in range(cur + 1, cur + j + 1):
